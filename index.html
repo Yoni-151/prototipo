@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don Coco | Dulcería Artesanal</title>
+    
+    <!-- FAVICON - ícono en la pestaña -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-7890</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <img src="img/logo.jpg" width="100" height="100"alt= "Don Coco Logo" class="logo-img-header">
+                    <h1 class="logo"><a href="/">Don Coco</a></h1>
+                </div>
+
+                <div class="container-user">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <div class="content-shopping-cart">
+                        <span class="text">Carrito</span>
+                        <span class="number" id="cartCounter">(0)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Mejores Categorías</a></li>
+                    <li><a href="#">Mejores Productos</a></li>
+                    <li><a href="#">Especiales</a></li>
+                    <li><a href="#">Más</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+
+                <form class="search-form" onsubmit="event.preventDefault(); alert('Buscando: ' + this.searchInput.value);">
+                    <input type="search" name="searchInput" placeholder="¿Qué te apetece hoy?" />
+                    <button class="btn-search" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <p>Los mejores dulces del país</p>
+            <h2>Dulces 100% originales <br />con 50% descuento</h2>
+            <a href="#" id="bannerShopBtn">Comprar ahora</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="container container-features">
+            <div class="card-feature">
+                <i class="fa-solid fa-plane-up"></i>
+                <div class="feature-content">
+                    <span>Envío gratuito a nivel mundial</span>
+                    <p>En pedido superior a $500</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-wallet"></i>
+                <div class="feature-content">
+                    <span>Contrareembolso</span>
+                    <p>100% garantía de devolución de dinero</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-gift"></i>
+                <div class="feature-content">
+                    <span>Tarjeta regalo especial</span>
+                    <p>Ofrece bonos especiales con regalo</p>
+                </div>
+            </div>
+            <div class="card-feature">
+                <i class="fa-solid fa-headset"></i>
+                <div class="feature-content">
+                    <span>Servicio al cliente 24/7</span>
+                    <p>LLámenos 24/7 al 123-456-7890</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container top-categories">
+            <h1 class="heading-1">Mejores Categorías</h1>
+            <div class="container-categories">
+                <div class="card-category category-moca">
+                    <p>chocolates</p>
+                    <span>Ver más</span>
+                </div>
+                <div class="card-category category-expreso">
+                    <p>gomitas</p>
+                    <span>Ver más</span>
+                </div>
+                <div class="card-category category-capuchino">
+                    <p>botanas</p>
+                    <span>Ver más</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container top-products">
+            <h1 class="heading-1">Mejores Productos</h1>
+            <div class="container-options">
+                <span class="active">Destacados</span>
+                <span>Más recientes</span>
+                <span>Mejores Vendidos</span>
+            </div>
+            <div class="container-products" id="productsGrid"></div>
+        </section>
+
+        <section class="gallery">
+            <img src="img/Pelon pelo rico.jpg" alt="Pelon pelo rico" class="gallery-img-1" />
+            <img src="img/Lucky_Ositos.jpg" alt="Lucky Ositos" class="gallery-img-2" />
+            <img src="img/bubbaloo mix.jpg" alt="bubbaloo mix" class="gallery-img-3" />
+            <img src="img/paletas laser.jpg" alt="paletas laser" class="gallery-img-4" />
+            <img src="img/caseras.jpg" alt="caseras" class="gallery-img-5" />
+        </section>
+
+        <section class="container specials">
+            <h1 class="heading-1">Especiales</h1>
+            <div class="container-products" id="specialsGrid"></div>
+        </section>
+
+			<section class="container blogs">
+				<h1 class="heading-1">Últimos Blogs</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+                        <img src="img/cachetada.jpg" alt="Blog dulces tradicionales">
+							<div class="button-group-blog">
+								<span><i class="fa-solid fa-magnifying-glass"></i></span>
+								<span><i class="fa-solid fa-link"></i></span>
+							</div>
+						</div>
+						<div class="content-blog">
+                        			<h3>Glow_Candy</h3>
+							<span>15 marzo 2026</span>
+							<p>¿Alguien más recuerda intentar hacer figuras con ellas en el recreo? Eran mis favoritas de la infancia."</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+                       				 <img src="img/rockaleta.jpg" alt="Blog rockaleta">
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>veronica_503</h3>
+							<span>5 Enero 2026</span>
+							<p>nunca antes habia probado dulces mexicanos y esta es la primera vez que los pruebo y la verdad si me sorprendieron son algo picosas pero si tengo que recomendar un dulce de mexico a un amigo creeo que escojos estos de aqui.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+                  			        <img src="img/panditas.jpg" ="Blog panditas">
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Omiya</h3>
+							<span>20 abril 2026</span>
+							<p>esta bien la bolsa y la cantidad es aceptable pero lo unico que me gustaria es que ubiera mas bariedad de sabores de estas gomitas escoji estas porque eran las unicas que habia de esta marca.</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                        <li>Teléfono: 123-456-7890</li>
+                        <li>Fax: 55555300</li>
+                        <li>Email: DulcesDoncoco@support.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                        <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Información Delivery</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+
+                <div class="my-account">
+                    <p class="title-footer">Mi cuenta</p>
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Historial de ordenes</a></li>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="#">Boletín</a></li>
+                        <li><a href="#">Reembolsos</a></li>
+                    </ul>
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">Boletín informativo</p>
+                    <div class="content">
+                        <p>Suscríbete a nuestros boletines ahora y mantente al día.</p>
+                        <input type="email" placeholder="Ingresa el correo aquí..." id="newsEmail">
+                        <button id="subscribeBtn">Suscríbete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Desarrollado por Programación para el mundo &copy; 2022</p>
+                <img src="img/payment.png" width="600" height="150" alt="Pagos">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Productos actualizados con imágenes reales
+        const productsList = [
+            { id: 1, name: 'Hershey\'s Almonds', price: 18.50, oldPrice: 25.00, discount: '-26%', stars: 5, image: 'img/hersheys.jpg' },
+            { id: 2, name: 'Bubulubu mini', price: 35.00, oldPrice: 45.00, discount: '-22%', stars: 4, image: 'img/bubulubu-mini.jpg' },
+            { id: 3, name: 'Vaquita chocolate', price: 12.00, oldPrice: 16.00, discount: '-25%', stars: 5, image: 'img/vaquita.jpg' },
+            { id: 4, name: 'Duvalin cremoso', price: 28.00, oldPrice: null, discount: null, stars: 4, image: 'img/duvalin.jpg' }
+        ];
+
+        const specials = [
+            { id: 5, name: 'Panditas clásicos', price: 22.00, oldPrice: 30.00, discount: '-27%', stars: 5, image: 'img/panditas.jpg' },
+            { id: 6, name: 'Rockaleta Bola', price: 15.00, oldPrice: 20.00, discount: '-25%', stars: 4, image: 'img/rockaleta.jpg' },
+            { id: 7, name: 'Ferrero Collection', price: 89.00, oldPrice: 120.00, discount: '-26%', stars: 5, image: 'img/ferrero.jpg' },
+            { id: 8, name: 'icee', price: 55.00, oldPrice: 75.00, discount: '-27%', stars: 4, image: 'img/icee.jpg' }
+        ];
+
+        let cartItems = [];
+
+        function updateCartCounter() {
+            const total = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const counterSpan = document.getElementById('cartCounter');
+            if (counterSpan) counterSpan.innerText = `(${total})`;
+        }
+
+        function addToCart(productId) {
+            const existing = cartItems.find(item => item.id === productId);
+            if (existing) existing.quantity++;
+            else cartItems.push({ id: productId, quantity: 1 });
+            updateCartCounter();
+            alert(' Producto añadido al carrito');
+        }
+
+        function renderProducts(containerId, products) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+            
+            products.forEach(prod => {
+                const discountHtml = prod.discount ? `<span class="discount">${prod.discount}</span>` : '';
+                const oldPriceHtml = prod.oldPrice ? `<span>$${prod.oldPrice.toFixed(2)}</span>` : '';
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    starsHtml += i <= prod.stars ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
+                }
+                
+                const card = document.createElement('div');
+                card.className = 'card-product';
+                card.innerHTML = `
+                    <div class="container-img">
+                        <img src="${prod.image}" alt="${prod.name}">
+                        ${discountHtml}
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">${starsHtml}</div>
+                        <h3>${prod.name}</h3>
+                        <span class="add-cart" data-id="${prod.id}"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$${prod.price.toFixed(2)} ${oldPriceHtml}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            document.querySelectorAll(`#${containerId} .add-cart`).forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    addToCart(parseInt(btn.dataset.id));
+                });
+            });
+        }
+
+        renderProducts('productsGrid', productsList);
+        renderProducts('specialsGrid', specials);
+
+        document.getElementById('bannerShopBtn')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(' 50% OFF en productos seleccionados');
+        });
+
+        document.getElementById('subscribeBtn')?.addEventListener('click', () => {
+            const email = document.getElementById('newsEmail');
+            if (email.value.includes('@')) {
+                alert(` ¡Gracias por suscribirte!`);
+                email.value = '';
+            } else {
+                alert('Ingresa un correo válido');
+            }
+        });
+
+        updateCartCounter();
+    </script>
+</body>
+</html>
